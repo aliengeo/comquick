@@ -1,0 +1,16 @@
+{{! check if pagination exist }}
+{{#if @pagination}}
+	<nav class="menu pagination">
+		<ul>
+			<li>{{#if @pagination.nextPage}}<a href="">{{translate 'pagination.first'}}</a></li>
+			<li><a href="{{@pagination.nextPageUrl}}">{{translate 'pagination.prev'}}</a>{{else}}{{translate 'pagination.first'}}{{/if}}</li>
+			<!-- <li><a href="">{{translate 'pagination.rand'}}</a></li> currently non-functional -->
+			<li>{{#if @pagination.previousPage}}<a href="{{@pagination.previousPageUrl}}">{{translate 'pagination.next'}}</a></li>
+			<li><a href="../../index.html">{{translate 'pagination.latest'}}</a></li>
+			{{else}}{{translate 'pagination.latest'}}{{/if}}</li>
+		</ul>
+	</nav>
+{{else}}
+<hr />
+{{/if}}
+{{! /check if pagination exist }}

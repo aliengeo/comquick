@@ -1,0 +1,367 @@
+{
+	"name": "Comquick",
+	"version": "1.0",
+	"author": "Innes Walker <https://linktr.ee/aliengeo>",
+	"postTemplates": {},
+	"tagTemplates": {},
+	"authorTemplates": {},
+	"menus": {},
+	"renderer": {
+		"relatedPostsNumber": 0,
+		"renderRelatedPosts": false,
+		"renderSimilarPosts": false,
+		"renderPrevNextPosts": true,
+		"createContentStructure": true,
+		"includeFeaturedInPosts": true,
+		"tagsIncludeFeaturedInPosts": true,
+		"authorsIncludeFeaturedInPosts": true,
+		"featuredPostsNumber": 0,
+		"tagsFeaturedPostsNumber": 0,
+		"authorsFeaturedPostsNumber": 0,
+		"createTagPages": true,
+		"createAuthorPages": true,
+		"createTagsList": true,
+		"create404page": true,
+		"createSearchPage": false,
+		"customHTML": {
+			"beforePost": "Before every post",
+			"afterPost": "After every post"
+		}
+	},
+	"supportedFeatures": {
+		"blockEditor": true,
+		"tagsList": true,
+		"tagImages": true,
+		"authorImages": true,
+		"searchPage": false,
+		"errorPage": true
+	},
+	"menus": {
+		"mainMenu": "Main menu",
+		"footerMenu": "Footer menu"
+	},
+	"config": [
+		{
+			"name": "postsPerPage",
+			"label": "Posts per page",
+			"value": 1,
+			"type": "number"
+		},
+		{
+			"name": "tagsPostsPerPage",
+			"label": "Tags posts per page",
+			"value": -1,
+			"type": "number"
+		},
+		{
+			"name": "authorsPostsPerPage",
+			"label": "Authors posts per page",
+			"value": -1,
+			"type": "number"
+		},
+		{
+			"name": "excerptLength",
+			"label": "Excerpt length",
+			"value": 25,
+			"type": "number"
+		},
+		{
+			"name": "logo",
+			"label": "Website logo",
+			"value": "",
+			"type": "upload",
+			"upload": true
+		}
+	],
+	"customConfig": [
+		{
+			"name": "fontSize",
+			"label": "Font size",
+			"group": "Size and Scale",
+			"note": "The font-size of the root element in REM unit",
+			"value": "1",
+			"type": "range",
+			"min": 1,
+			"max": 3,
+			"step": 0.05
+		},
+		{
+			"name": "imgSize",
+			"label": "Image maximum size",
+			"group": "Size and Scale",
+			"note": "The maximum percentage of the page an image can take up by width",
+			"value": "75",
+			"type": "range",
+			"min": 50,
+			"max": 100,
+			"step": 5
+		},
+		{
+			"name": "bgColor",
+			"label": "Background color",
+			"group": "Colors",
+			"value": "#cfcfcf",
+			"type": "colorpicker"
+		},
+		{
+			"name": "linkColor",
+			"label": "Link text color",
+			"group": "Colors",
+			"value": "#136BC8",
+			"type": "colorpicker"
+		},
+		{
+			"name": "linkHoverColor",
+			"label": "Link text color on hover",
+			"group": "Colors",
+			"value": "#319FCE",
+			"type": "colorpicker"
+		},
+		{
+			"name": "Header",
+			"type": "separator",
+			"group": "Colors",
+			"size": "small"
+		},
+		{
+			"name": "headerColor",
+			"label": "Header color",
+			"group": "Colors",
+			"value": "#000000",
+			"type": "colorpicker"
+		},
+		{
+			"name": "headerTextColor",
+			"label": "Header text color",
+			"group": "Colors",
+			"value": "#ffffff",
+			"type": "colorpicker"
+		},
+		{
+			"name": "headerTextHoverColor",
+			"label": "Header text color on hover",
+			"group": "Colors",
+			"value": "#696969",
+			"type": "colorpicker"
+		},
+		{
+			"name": "Page Navigation Menu",
+			"type": "separator",
+			"group": "Colors",
+			"size": "small"
+		},
+		{
+			"name": "pageNavColor",
+			"label": "Page navigation menu color",
+			"group": "Colors",
+			"value": "#000000",
+			"type": "colorpicker"
+		},
+		{
+			"name": "pageNavTextColor",
+			"label": "Page navigation menu text color",
+			"group": "Colors",
+			"value": "#ffffff",
+			"type": "colorpicker"
+		},
+		{
+			"name": "pageNavTextHoverColor",
+			"label": "Page navigation menu text color on hover",
+			"group": "Colors",
+			"value": "#696969",
+			"type": "colorpicker"
+		},
+		{
+			"name": "pageNavInactiveColor",
+			"label": "Page navigation menu text color when inactive",
+			"group": "Colors",
+			"value": "#7A7A7A",
+			"type": "colorpicker"
+		},
+		{
+			"name": "faviconUpload",
+			"label": "Upload favicon file",
+			"group": "Additional",
+			"note": "The ideal size of a favicon is 16x16 pixels. Save your favicon as either favicon.png or favicon.ico",
+			"value": "",
+			"type": "smallupload",
+			"upload": true
+		},
+		{
+			"name": "faviconExtension",
+			"label": "Favicon extension",
+			"group": "Additional",
+			"value": "image/x-icon",
+			"type": "select",
+			"options": [
+				{
+					"label": ".ico",
+					"value": "image/x-icon"
+				},
+				{
+					"label": ".png",
+					"value": "image/png"
+				}
+			]
+		}
+	],
+	"postConfig": [
+		{
+			"name": "displayAuthorBio",
+			"label": "Display author bio",
+			"value": 1,
+			"type": "select",
+			"options": [
+				{
+					"label": "Enabled",
+					"value": 1
+				},
+				{
+					"label": "Disabled",
+					"value": 0
+				}
+			]
+		},
+		{
+			"name": "showFeatured",
+			"label": "Featured Image Mode",
+			"note": "Inline shows the featured image as the first image in the post. Preview will only show the featured image in previews and links, not in the post at all, for creators who use custom crops or edits when sharing on social media.",
+			"value": 1,
+			"type": "select",
+			"options": [
+				{
+					"label": "Inline",
+					"value": 1
+				},
+				{
+					"label": "Preview",
+					"value": 0
+				}
+			]
+		}
+	],
+	"files": {
+		"ignoreAssets": [
+			"scss",
+			".DS_Store"
+		],
+		"assetsPath": "assets",
+		"partialsPath": "partials",
+		"responsiveImages": {
+			"contentImages": {
+				"sizes": "(max-width: 1200px) 100vw, 1200px",
+				"dimensions": {
+					"xs": {
+						"width": 300,
+						"height": "auto"
+					},
+					"sm": {
+						"width": 480,
+						"height": "auto"
+					},
+					"md": {
+						"width": 749,
+						"height": "auto"
+					},
+					"xl": {
+						"width": 1200,
+						"height": "auto"
+					}
+				}
+			},
+			"featuredImages": {
+				"sizes": "(max-width: 1200px) 100vw, 1200px",
+				"dimensions": {
+					"xs": {
+						"width": 300,
+						"height": 200
+					},
+					"sm": {
+						"width": 480,
+						"height": "auto"
+					},
+					"md": {
+						"width": 749,
+						"height": "auto"
+					},
+					"xl": {
+						"width": 1200,
+						"height": "auto"
+					}
+				}
+			},
+			"tagImages": {
+				"sizes": "(max-width: 1200px) 100vw, 1200px",
+				"dimensions": {
+					"xs": {
+						"width": 300,
+						"height": 200
+					},
+					"sm": {
+						"width": 480,
+						"height": "auto"
+					},
+					"md": {
+						"width": 749,
+						"height": "auto"
+					},
+					"xl": {
+						"width": 1200,
+						"height": "auto"
+					}
+				}
+			},
+			"authorImages": {
+				"sizes": "(max-width: 1200px) 100vw, 1200px",
+				"dimensions": {
+					"xs": {
+						"width": 300,
+						"height": 200
+					},
+					"sm": {
+						"width": 480,
+						"height": "auto"
+					},
+					"md": {
+						"width": 749,
+						"height": "auto"
+					},
+					"xl": {
+						"width": 1200,
+						"height": "auto"
+					}
+				}
+			},
+			"optionImages": {
+				"sizes": "(max-width: 1200px) 100vw, 1200px",
+				"dimensions": {
+					"xs": {
+						"width": 300,
+						"height": 200
+					},
+					"sm": {
+						"width": 480,
+						"height": "auto"
+					},
+					"md": {
+						"width": 749,
+						"height": "auto"
+					},
+					"xl": {
+						"width": 1200,
+						"height": "auto"
+					}
+				}
+			},
+			"galleryImages": {
+				"sizes": "",
+				"dimensions": {
+					"thumbnail": {
+						"width": 720,
+						"height": "auto"
+					}
+				}
+			}
+		}
+	}
+}
